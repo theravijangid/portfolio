@@ -20,7 +20,12 @@ module.exports = {
         900: "#000814",
       },
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(180deg, rgba(207,213,255,1) 0%, rgba(251,226,227,1) 100%)',
+        'dark-custom-gradient': 'linear-gradient(180deg, #000814 0%, #000814 100%)',
+      },
+    },
   },
   plugins: [],
   darkMode: "class",

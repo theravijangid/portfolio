@@ -13,13 +13,18 @@ const Card = () => {
     <div>
         <div>
             <Swiper
-                slidesPerView={3}
-                spaceBetween={60}
+                slidesPerView={1}
+                spaceBetween={50}
                 loop={true}
                 freeMode={true}
                 autoplay={{
                     delay: 3500,
                 }}
+                breakpoints={{
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                    }}
                 modules={[FreeMode, Pagination, Autoplay]}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
@@ -29,16 +34,16 @@ const Card = () => {
                 {   
                     projectDetails.map( (data, index) => {
                         return (
-                        <SwiperSlide key={index}>
-                        <div className="rounded-lg w-[370px] mb-2 ">
-                           <img src={data.image} className="w-[370px] " alt={data.title}/>
-                            <div className="dark:bg-richblack-800 bg-richblack-5 min-h-[250px] py-3 px-3 space-y-3">
+                        <SwiperSlide key={index} className="rounded-lg overflow-hidden">
+                        <div className="rounded-lg lg:w-[350px]  overflow-hidden">
+                           <img src={data.image} className="lg:w-[350px]  " alt={data.title}/>
+                            <div className="dark:bg-richblack-800 bg-richblack-5 min-h-[260px] py-3 px-3 lg:px-7 space-y-3 overflow-hidden">
                                 <p className="text-2xl font-bold font-sans">{data.title}</p>
                                 <div className="flex gap-7 underline">
-                                    <a href={data.git} target="_blank" rel="noopener noreferrer" className="flex items-center">GitHub <GoArrowUpRight/> </a>
-                                    <a href={data.live} target="_blank" rel="noopener noreferrer" className="flex items-center">Live <GoArrowUpRight/></a>   
+                                    <a href={data.git} target="_blank"  className="flex items-center">GitHub <GoArrowUpRight/> </a>
+                                    <a href={data.live} target="_blank"  className="flex items-center">Live <GoArrowUpRight/></a>   
                                 </div>
-                                <p className="text-base font-thin pb-3">{data.desc}</p>
+                                <p className="text-base font-thin  overflow-hidden">{data.desc}</p>
                             </div>
 
                         </div>
