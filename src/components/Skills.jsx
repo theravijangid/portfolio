@@ -5,6 +5,14 @@ import { SiCss3 } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TbBrandRedux } from "react-icons/tb";
+import { FaNode } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { SiMongodb } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
+
 
 const frontend = [
     {
@@ -44,44 +52,53 @@ const frontend = [
 const backend = [
     {
         name: "Node js",
+        icon: <FaNode/>,
+        className: 'text-[#3c873a]',
     },
     {
         name: "Express js",
+        icon: <SiExpress/>,
     },
 ];
 
 const Database = [
     {
         name: "MySql",
+        icon: <GrMysql/>,
+        className: "text-[#00758f]"
     },
     {
         name: "MongoDB",
+        icon: <SiMongodb/>,
+        className: "text-[#589636]"
     },
 ];
 
 const others = [
     {
         name: "Git",
+        icon: <FaGitAlt/>,
+        className: "text-[#F1502F]"
     },
     {
         name: "Git Hub",
+        icon: <FaGithub/>
     },
     {
         name: "Postman",
-    },
-    {
-        name: "Git",
+        icon: <SiPostman/>,
+        className: "text-[#EF5B25]"
     },
 ]
 
 const Skills = () => {
   return (
-    <div className='flex flex-wrap gap-10 justify-between'>
+    <div className='flex flex-wrap justify-between'>
             {/* Frontend */}
-            <div className='py-5 px-6 rounded-lg bg-gradient-to-br from-[#f5e9e9]  to-[#fcfcfc] w-[230px] '>
+            <div className='py-5 px-6 rounded-lg mb-5 bg-skill-gradient w-full lg:w-[250px] dark:bg-light-gradient dark:text-richblack-5 hover:scale-[101%] transition-all duration-200'>
             <p className='font-mono font-bold text-xl mb-2'>Frontend</p>
             {frontend.map((tech, index) => (
-                <div key={index} className='flex items-center gap-x-3 py-2 text-[17px] font-mono font-semibold '>
+                <div key={index} className='flex items-center gap-x-3 py-2 text-[16px] font-sans font-semibold '>
                     <span className={tech.className} style={{ fontSize: '24px' }} >{tech.icon}</span> 
                     <span>{tech.name}</span>
                 </div>
@@ -89,10 +106,10 @@ const Skills = () => {
             </div>
 
             {/* backend */}
-            <div className='py-5 px-6 rounded-lg bg-gradient-to-br from-[#f5e9e9]  to-[#fcfcfc] w-[230px] '>
+            <div className='py-5 px-6 rounded-lg mb-5 bg-skill-gradient w-full lg:w-[250px] dark:bg-light-gradient dark:text-richblack-5 hover:scale-[101%] transition-all duration-200'>
             <p className='font-mono font-bold text-xl mb-2'>Backend</p>
             {backend.map((tech, index) => (
-                <div key={index} className='flex items-center gap-x-3 py-2 text-[17px] font-mono font-semibold '>
+                <div key={index} className='flex items-center gap-x-3 py-2 text-[16px] font-mono font-semibold '>
                     <span className={tech.className} style={{ fontSize: '24px' }} >{tech.icon}</span> 
                     <span>{tech.name}</span>
                 </div>
@@ -100,10 +117,10 @@ const Skills = () => {
             </div>
 
             {/* database */}
-            <div className='py-5 px-6 rounded-lg bg-gradient-to-br from-[#f5e9e9]  to-[#fcfcfc] w-[230px] '>
+            <div className='py-5 px-6 rounded-lg mb-5 bg-skill-gradient w-full lg:w-[250px] dark:bg-light-gradient dark:text-richblack-5 hover:scale-[101%] transition-all duration-200'>
             <p className='font-mono font-bold text-xl mb-2'>Database</p>
             {Database.map((tech, index) => (
-                <div key={index} className='flex items-center gap-x-3 py-2 text-[17px] font-mono font-semibold '>
+                <div key={index} className='flex items-center gap-x-3 py-2 text-[16px] font-mono font-semibold '>
                     <span className={tech.className} style={{ fontSize: '24px' }} >{tech.icon}</span> 
                     <span>{tech.name}</span>
                 </div>
@@ -111,10 +128,10 @@ const Skills = () => {
             </div>
 
             {/* others */}
-            <div className='py-5 px-6 rounded-lg bg-gradient-to-br from-[#f5e9e9]  to-[#fcfcfc] w-[230px] '>
+            <div className='py-5 px-6 rounded-lg mb-5 bg-skill-gradient w-full lg:w-[250px] dark:bg-light-gradient dark:text-richblack-5 hover:scale-[101%] transition-all duration-200'>
             <p className='font-mono font-bold text-xl mb-2'>Other Tech</p>
             {others.map((tech, index) => (
-                <div key={index} className='flex items-center gap-x-3 py-2 text-[17px] font-mono font-semibold '>
+                <div key={index} className='flex items-center gap-x-3 py-2 text-[16px] font-mono font-semibold '>
                     <span className={tech.className} style={{ fontSize: '24px' }} >{tech.icon}</span> 
                     <span>{tech.name}</span>
                 </div>
